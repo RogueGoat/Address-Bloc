@@ -17,6 +17,26 @@
        expect(book.entries.size).to eq(0)
      end
    end
+   
+   context "remove_entry"
+      it "removes entry based on name, phone_number, and email address" do
+          book = AddressBook.new
+          book.add_entry("Kangaroo Jack", "999.777.3434", "KangaDOO@australia.com")
+          
+          name = "Boo Booginton"
+          phone_number = "988.877.6555"
+          email_address = "boogerguy@scare.com"
+          book.add_entry(name, phone_number, email_address)
+          
+          expect(book.entries.size).to eq 2
+          book.remove_entry(name, phone_number, email_address)
+          expect(book.entries.size).to eq 1
+          expect(book.entries.first.name).to eq("Kangaroo Jack")
+
+
+      end
+   end
+   
     describe "#add_entry" do
      it "adds only one entry to the address book" do
        book = AddressBook.new
