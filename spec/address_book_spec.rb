@@ -15,7 +15,6 @@
      it "responds to entries" do
        expect(book).to respond_to(:entries)
      end
-
      it "initializes entries as an array" do
        expect(book.entries).to be_an(Array)
      end
@@ -61,7 +60,6 @@
        check_entry(entry_one, "Bill", "555-555-4854", "bill@blocmail.com")
      end
      
-   end
        it "imports the 2nd entry" do
        book.import_from_csv("entries.csv")
        # Check the second entry
@@ -92,5 +90,5 @@
        entry_five = book.entries[4]
        check_entry(entry_five, "Sussie", "555-555-2036", "sussie@blocmail.com")
      end
-     
+    end
    end
