@@ -42,9 +42,8 @@
    end
  
    # Test that AddressBook's .import_from_csv() method is working as expected
-     describe "#import_from_csv" do
+       describe "#import_from_csv" do
        it "imports the correct number of entries" do
-       # #3
        book.import_from_csv("entries.csv")
        book_size = book.entries.size
  
@@ -93,13 +92,13 @@
      end
     end
      
-       describe "importing from entries_2.cvs" do
+       describe "#import_from_csv" do
        it "imports the correct number of entries" do
        book.import_from_csv("entries_2.csv")
-      
+       book_size = book.entries.size
+
        expect(book_size).to eq 3
        end
-      
        it "imports the 1st entry" do
        book.import_from_csv("entries_2.csv")
        entry_one = book.entries[0]
