@@ -54,7 +54,7 @@
    end
    
    def view_spec_entry
-    puts "Entry number selected - "
+    puts "Select a Valid Entry: "
     selection = gets.chomp.to_i
     
     if selection > @address_book.entries.count

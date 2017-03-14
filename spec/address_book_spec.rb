@@ -55,4 +55,5 @@
        expect(new_entry.email).to eq('augusta.king@lovelace.com')
      end
    end
+ 
  end
